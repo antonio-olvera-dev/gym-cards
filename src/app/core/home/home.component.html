@@ -5,41 +5,46 @@
     <div class="form-group">
         <label>Nombre y apellidos</label>
         <input type="email" class="form-control" formControlName="name"
-        [ngClass]="{'is-valid': validName}"
+        [ngClass]="{'is-valid': validName, 'is-invalid': invalidName}"
         >
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <small *ngIf="invalidName" class="form-text text-muted">Este campo debe de tener al menos 4 caractéres</small>
     </div>
 
     <div class="form-group">
         <label>Altura</label>
-        <input type="email" class="form-control" formControlName="heigh">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="text" class="form-control" formControlName="heigh"
+        [ngClass]="{'is-valid': validHeigh, 'is-invalid': invalidHeigh}">
+        <small *ngIf="invalidHeigh" class="form-text text-muted">Este campo debe de tener al menos 2 caractéres</small>
     </div>
     
     <div class="form-group">
         <label>Peso</label>
-        <input type="email" class="form-control" formControlName="weigh">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="text" class="form-control" formControlName="weigh"
+        [ngClass]="{'is-valid': validWeigh, 'is-invalid': invalidWeigh}">
+        <small *ngIf="invalidWeigh" class="form-text text-muted">Este campo debe de tener al menos 2 caractéres</small>
     </div>
 
     <div class="form-group">
         <label>Email</label>
-        <input type="email" class="form-control" formControlName="email">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="email" class="form-control" formControlName="email"
+        [ngClass]="{'is-valid': validEmail, 'is-invalid': invalidEmail}">
+        <small *ngIf="invalidEmail" class="form-text text-muted">El correo electrónico debe de ser válido</small>
     </div>
 
     <div class="form-group">
         <label>Dirección</label>
-        <input type="email" class="form-control" formControlName="adress">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="text" class="form-control" formControlName="adress"
+        [ngClass]="{'is-valid': validAdress, 'is-invalid': invalidAdress}">
+        <small *ngIf="invalidAdress" class="form-text text-muted">Este campo debe de tener al menos 4 caractéres.</small>
     </div>
 
     <div class="form-group">
         <label>Validez</label>
-        <input type="email" class="form-control" formControlName="validation">
-        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input type="date" class="form-control" formControlName="validation"
+        [ngClass]="{'is-valid': validValidation, 'is-invalid': invalidValidation}">
+        <small *ngIf="invalidValidation" class="form-text text-muted">La fecha debe tener el siguiente formato: 01/02/2020</small>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    <button  type="submit" class="btn btn-primary">Enviar</button>
 </form>
 
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService ,Users} from 'src/app/shared/services/users.service';
 
 @Component({
   selector: 'app-print',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrintComponent implements OnInit {
 
-  constructor() { }
+  users: Users[];
+  constructor( usersService: UsersService) {
+    this.users = usersService.users;
+    
+    
+  }
 
   ngOnInit(): void {
   }
