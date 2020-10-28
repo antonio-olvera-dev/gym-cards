@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gym-cards"
+    }
+  },
+  "defaultProject": "gym-cards",
+  "cli": {
+    "analytics": "6f4de8f6-2af0-4abc-9d92-796c5fff2d52"
+  }
 }

@@ -1,0 +1,45 @@
+
+<div class="container size">
+<form  autocomplete="off"  [formGroup]="forma" (submit)="saveForm()">
+
+    <div class="form-group">
+        <label>Nombre y apellidos</label>
+        <input type="email" class="form-control" formControlName="name"
+        [ngClass]="{'is-valid': validName}"
+        >
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label>Altura</label>
+        <input type="email" class="form-control" formControlName="heigh">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    
+    <div class="form-group">
+        <label>Peso</label>
+        <input type="email" class="form-control" formControlName="weigh">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" formControlName="email">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label>Dirección</label>
+        <input type="email" class="form-control" formControlName="adress">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label>Validez</label>
+        <input type="email" class="form-control" formControlName="validation">
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+</div>
