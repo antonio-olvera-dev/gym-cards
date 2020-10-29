@@ -11,6 +11,7 @@ import { UsersService } from 'src/app/shared/services/users.service';
 export class HomeComponent implements OnInit {
 
   forma: FormGroup;
+  date:Date = new Date();
 
   constructor(private fb: FormBuilder, private users:UsersService,private router:Router) { this.createForm(); }
 
@@ -26,7 +27,7 @@ export class HomeComponent implements OnInit {
       weigh: ['', [Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.minLength(3), Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]],
       adress: ['', [Validators.required, Validators.minLength(4)]],
-      validation: ['', [Validators.required, Validators.minLength(8)]],
+      validation: [`${this.date}`, [Validators.required, Validators.minLength(8)]],
     });
 
   }

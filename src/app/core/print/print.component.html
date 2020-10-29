@@ -1,11 +1,11 @@
 
 <ul *ngFor="let user of users" class="list-group">
-    <li class="list-group-item active">{{user.name}}</li>
+    <li class="list-group-item active">{{user.name | capitalize}}</li>
     <li class="list-group-item">{{user.heigh}}</li>
     <li class="list-group-item">{{user.weigh}}</li>
-    <li class="list-group-item">{{user.email}}</li>
-    <li class="list-group-item">{{user.adress}}</li>
-    <li class="list-group-item">{{user.validators}}</li>
+    <li class="list-group-item">{{user.email | capitalize}}</li>
+    <li class="list-group-item">{{user.adress | capitalize}}</li>
+    <li class="list-group-item">{{user.validators | date:'dd/MM/yyyy'}}</li>
 
     
   </ul>

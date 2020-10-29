@@ -40,7 +40,7 @@
 
     <div class="form-group">
         <label>Validez</label>
-        <input type="date" class="form-control" formControlName="validation"
+        <input readonly type="text" class="form-control" formControlName="validation"
         [ngClass]="{'is-valid': validValidation, 'is-invalid': invalidValidation}">
         <small *ngIf="invalidValidation" class="form-text text-muted">La fecha debe tener el siguiente formato: 01/02/2020</small>
     </div>
