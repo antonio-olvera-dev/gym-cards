@@ -8,6 +8,7 @@ import { HomeComponent } from './core/home/home.component';
 import { PrintComponent } from './core/print/print.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { CapitalizePipe } from './pipes/capitalize.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     HomeComponent,
     PrintComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule,
